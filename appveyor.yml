@@ -2,10 +2,9 @@
 
 environment:
   NugetApiKey:
-    secure: ***************
+    secure: 0gKIN7P/STYmuqoaIHUTQB9RCwKMLZJXNO96jALWlvYNZ5DQ7k0zi9YYxWhMrwS4
 
-# Allow WMF5 (i.e. PowerShellGallery functionality)
-os: WMF 5
+image: Visual Studio 2019
 
 # Skip on updates to the readme.
 # We can force this by adding [skip ci] or [ci skip] anywhere in commit message 
@@ -16,4 +15,4 @@ build: false
 
 #Kick off the CI/CD pipeline
 test_script:
-  - ps: . .\build.ps1
+  - pwsh: . .\build.ps1
